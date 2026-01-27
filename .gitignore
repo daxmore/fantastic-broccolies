@@ -1,0 +1,17 @@
+# System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Agent Files
+.agent/
