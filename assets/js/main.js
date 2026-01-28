@@ -11,19 +11,6 @@ $(document).ready(function () {
         }
     });
 
-    // Header Scroll Effect (Glassmorphism transition)
-    var header = $('#page-home-header');
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-            header.addClass('shadow-sm bg-white-translucent py-2').removeClass('py-3');
-            header.css('background', 'rgba(255, 255, 255, 0.95)');
-        } else {
-            header.removeClass('shadow-sm bg-white-translucent py-2').addClass('py-3');
-            header.css('background', 'rgba(255, 255, 255, 0.0)'); // Transparent at top
-        }
-    });
-
     // Reveal Animations on Scroll
     function reveal() {
         var revealed = false;
@@ -54,29 +41,34 @@ $(document).ready(function () {
     $(window).on('scroll', reveal);
     reveal(); // Trigger once on load
 
-    // Hover effects for Bento Items (Parallax-ish)
-    $('.bento-item').mousemove(function (e) {
-        var moveX = (e.pageX * -1 / 15);
-        var moveY = (e.pageY * -1 / 15);
-        // Subtle movement of the image within the container
-        // $(this).find('.bento-img').css('transform', 'scale(1.1) translate(' + moveX/10 + 'px, ' + moveY/10 + 'px)'); 
-        // Commenting out as simple CSS hover is smoother for performance
+
+    // Product Carousel Logic (Owl Carousel)
+    var gearCarousel = $('#home-gear-section .owl-carousel');
+    gearCarousel.owlCarousel({
+        loop: true,
+        margin: 24,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            992: {
+                items: 4
+            }
+        }
     });
 
-    // Product Scroller Logic
-    const productContainer = $('#home-products-section .overflow-x-auto');
-    const scrollAmount = 350; // Width of card + gap approx
-
-    $('#home-products-section .bi-arrow-left').parent().click(function () {
-        productContainer.animate({
-            scrollLeft: productContainer.scrollLeft() - scrollAmount
-        }, 300);
+    // Custom Navigation Events
+    $('#home-gear-section .bi-chevron-left').parent().click(function () {
+        gearCarousel.trigger('prev.owl.carousel');
     });
 
-    $('#home-products-section .bi-arrow-right').parent().click(function () {
-        productContainer.animate({
-            scrollLeft: productContainer.scrollLeft() + scrollAmount
-        }, 300);
+    $('#home-gear-section .bi-chevron-right').parent().click(function () {
+        gearCarousel.trigger('next.owl.carousel');
     });
 
 });

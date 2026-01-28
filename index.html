@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NextGen Marketing & Tech Insights - A modern blog for the digital age.">
-    <title>NextGen | Future of Marketing</title>
+    <meta name="description"
+        content="fantastic-broccolies Marketing & Tech Insights - A modern blog for the digital age.">
+    <title>fantastic-broccolies | Future of Marketing</title>
 
     <!-- Google Fonts: Outfit & Inter for unique pairing -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,45 +22,43 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="page-home" class="overflow-x-hidden">
+<body id="page-home" class="overflow-x-hidden container">
 
-    <!-- Unique Floating Header -->
-    <header id="page-home-header" class="fixed-top transition-all py-3">
+    <!-- Header -->
+    <header id="page-home-header" class="fixed-top bg-white border-bottom py-2">
         <nav class="container navbar navbar-expand-lg">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center"
-                    style="width: 40px; height: 40px;">
-                    <i class="bi bi-tree-fill"></i>
-                </div>
-                <span class="fw-bold">fantastic-broccolies</span>
+                <i class="bi bi-layout-text-window-reverse text-primary fs-5"></i>
+                <span class="fw-bold text-uppercase ls-1 fs-5"
+                    style="color: #e5766c; letter-spacing: -0.5px; font-weight: 800;">EliteEditorial</span>
             </a>
 
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navContent">
-                <span class="bi bi-grid-fill fs-3"></span>
+                <span class="bi bi-list fs-3"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navContent">
-                <ul class="navbar-nav mx-auto bg-white px-4 py-2 rounded-pill shadow-sm d-none d-lg-flex">
-                    <li class="nav-item"><a class="nav-link" href="#">Start Here</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Strategy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Creative</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tech</a></li>
-                </ul>
-                <!-- Mobile Menu (Visible only on mobile collapse) -->
-                <ul class="navbar-nav d-lg-none mb-3">
-                    <li class="nav-item"><a class="nav-link" href="#">Start Here</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Strategy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Creative</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tech</a></li>
+            <div class="collapse navbar-collapse justify-content-between" id="navContent">
+                <ul class="navbar-nav fw-bold text-dark gap-0">
+                    <li class="nav-item"><a class="nav-link text-dark p-1 m-0" href="#">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark p-1 m-0" href="#">Top Picks</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark p-1 m-0" href="#">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark p-1 m-0" href="#">About</a></li>
                 </ul>
 
-                <div class="d-flex gap-3">
-                    <a href="#" class="btn btn-outline-dark btn-sm rounded-pill px-4">Log In</a>
-                    <a href="#newsletter" class="btn btn-primary btn-sm rounded-pill px-4 shadow-lg">Subscribe</a>
+                <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                    <div class="header-search-wrapper rounded-2 px-3 py-2 d-flex align-items-center"
+                        style="min-width: 280px;">
+                        <i class="bi bi-search text-muted me-2"></i>
+                        <input type="text" class="form-control border-0 bg-transparent p-0 shadow-none small text-dark"
+                            placeholder="Search guides & reviews...">
+                    </div>
+                    <a href="#newsletter" class="btn btn-dark rounded-2 py-2 px-3 text-white hover-opacity"
+                        id="subscribe-btn">Subscribe</a>
                 </div>
             </div>
         </nav>
@@ -67,369 +66,462 @@
 
     <main id="page-home-main" style="padding-top: 100px;">
 
-        <!-- Hero Section: Clean & Minimal -->
+        <!-- Hero: Featured & Trending -->
         <section id="home-hero-section" class="py-5">
-            <div class="container py-lg-5">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-6">
-                        <h1 class="display-3 fw-bold mb-3 text-primary">Natural Growth for <br>Digital Brands.</h1>
-                        <p class="lead text-dark opacity-75 mb-4" style="max-width: 480px;">
-                            We provide the soil, water, and sunlight for your marketing strategy. Simple, effective, and
-                            organic insights.
-                        </p>
-                        <div class="d-flex gap-3">
-                            <a href="#home-blog-section" class="btn btn-primary rounded-pill px-4">Read Articles</a>
-                            <a href="#newsletter" class="btn btn-outline-dark rounded-pill px-4">Subscribe</a>
+            <div class="container">
+                <div class="row g-5">
+                    <!-- Featured Article (Left) -->
+                    <div class="col-lg-8">
+                        <div class="card border-0 bg-white h-100">
+                            <div class="position-relative rounded-top-4 rounded-bottom-0 overflow-hidden mb-4"
+                                style="height: 400px;">
+                                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="w-100 h-100 object-fit-cover" alt="Workspace">
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex align-items-center gap-3 mb-3 small text-uppercase fw-bold">
+                                    <span class="text-primary editor">Editor's Choice</span>
+                                    <span class="text-muted small">6 Min Read</span>
+                                </div>
+                                <h1 class="display-4 fw-bold mb-3 text-dark">The Future of Workspace Ergonomics: Our
+                                    2024
+                                    Deep Dive</h1>
+                                <p class="text-muted fs-5 mb-4">After 500+ hours of testing the latest standing desks,
+                                    ergonomic chairs, and monitor mounts, our experts have curated the ultimate setup
+                                    for
+                                    long-term health and peak performance.</p>
+                                <div>
+                                    <a href="#" class="btn btn-primary rounded-2 px-4 py-2">Read Full Review <i
+                                            class="bi bi-arrow-right ms-2"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
-                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
-                            class="img-fluid rounded-4 shadow-sm" alt="Minimal Workspace">
+                    <!-- Trending Now (Right) -->
+                    <div class="col-lg-4" id="home-trending-section">
+                        <div class="bg-transparent h-100 trending-section">
+                            <div class="shadow-sm bg-white p-4 rounded-4 trending-card">
+                                <h5 class="fw-bold mb-4 text-dark"><i
+                                        class="bi bi-graph-up-arrow text-primary me-2"></i>
+                                    Trending Now</h5>
+
+                                <div class="d-flex flex-column gap-4">
+                                    <!-- Item 1 -->
+                                    <div class="d-flex gap-3 align-items-start">
+                                        <span class="fs-1 fw-bold lh-1 hero-numbers">01</span>
+                                        <div>
+                                            <h6 class="fw-bold mb-1"><a href="#"
+                                                    class="text-dark text-decoration-none hover-primary">Top 10
+                                                    Mechanical
+                                                    Keyboards for Writers in 2024</a></h6>
+                                            <div class="text-muted small">12.5k views this week</div>
+                                        </div>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="d-flex gap-3 align-items-start">
+                                        <span class="fs-1 fw-bold lh-1 hero-numbers">02</span>
+                                        <div>
+                                            <h6 class="fw-bold mb-1"><a href="#"
+                                                    class="text-dark text-decoration-none hover-primary">Best
+                                                    Noise-Canceling Headphones for Deep Focus</a></h6>
+                                            <div class="text-muted small">8.8k views this week</div>
+                                        </div>
+                                    </div>
+                                    <!-- Item 3 -->
+                                    <div class="d-flex gap-3 align-items-start">
+                                        <span class="fs-1 fw-bold lh-1 hero-numbers">03</span>
+                                        <div>
+                                            <h6 class="fw-bold mb-1"><a href="#"
+                                                    class="text-dark text-decoration-none hover-primary">M3 MacBook Pro:
+                                                    One
+                                                    Month Later Review</a></h6>
+                                            <div class="text-muted small">7.2k views this week</div>
+                                        </div>
+                                    </div>
+                                    <!-- Item 4 -->
+                                    <div class="d-flex gap-3 align-items-start">
+                                        <span class="fs-1 fw-bold lh-1 hero-numbers">04</span>
+                                        <div>
+                                            <h6 class="fw-bold mb-1"><a href="#"
+                                                    class="text-dark text-decoration-none hover-primary">The Best
+                                                    Productivity Apps You're Not Using</a></h6>
+                                            <div class="text-muted small">5.3k views this week</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Product Spotlight Section -->
-        <section id="home-products-section" class="py-5 bg-light overflow-hidden">
+
+        <!-- Categories Section -->
+        <section id="home-categories" class="py-5 border-bottom">
             <div class="container">
-                <div class="d-flex justify-content-between align-items-end mb-4">
-                    <div>
-                        <span class="badge bg-warning text-dark rounded-pill mb-2 px-3">Curated Store</span>
-                        <h2 class="fw-bold mb-0">Creator Tools</h2>
+                <div class="row g-2 justify-content-center">
+                    <!-- Kurtis -->
+                    <div class="col-4 col-md-2">
+                        <a href="#" class="d-block text-decoration-none text-center group">
+                            <div class="rounded-4 overflow-hidden mb-2 position-relative shadow-sm"
+                                style="aspect-ratio: 1/1;">
+                                <img src="https://www.kashmirbox.com/cdn/shop/files/KashirBox3573copy.jpg?v=1748496649&width=1500"
+                                    class="w-100 h-100 object-fit-cover transition-transform scale-hover" alt="Kurtis">
+                                <div
+                                    class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 transition-opacity group-hover-overlay">
+                                </div>
+                            </div>
+                            <h6 class="fw-bold text-dark small text-uppercase mb-0">Kurtis</h6>
+                        </a>
                     </div>
+
+                    <!-- Jewellery -->
+                    <div class="col-4 col-md-2">
+                        <a href="#" class="d-block text-decoration-none text-center group">
+                            <div class="rounded-4 overflow-hidden mb-2 position-relative shadow-sm"
+                                style="aspect-ratio: 1/1;">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwd7004c0d/homepage/trendingNow/gifting.jpg"
+                                    class="w-100 h-100 object-fit-cover transition-transform scale-hover"
+                                    alt="Jewellery">
+                                <div
+                                    class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 transition-opacity group-hover-overlay">
+                                </div>
+                            </div>
+                            <h6 class="fw-bold text-dark small text-uppercase mb-0">Jewellery</h6>
+                        </a>
+                    </div>
+
+                    <!-- Sarees -->
+                    <div class="col-4 col-md-2">
+                        <a href="#" class="d-block text-decoration-none text-center group">
+                            <div class="rounded-4 overflow-hidden mb-2 position-relative shadow-sm"
+                                style="aspect-ratio: 1/1;">
+                                <img src="https://ivalinmabia.com/cdn/shop/files/maanvi-maheswari-silk-cotton-saree-teal-blue-and-royal-sarees-888.webp?v=1735047904&width=3840"
+                                    class="w-100 h-100 object-fit-cover transition-transform scale-hover" alt="Sarees">
+                                <div
+                                    class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 transition-opacity group-hover-overlay">
+                                </div>
+                            </div>
+                            <h6 class="fw-bold text-dark small text-uppercase mb-0">Sarees</h6>
+                        </a>
+                    </div>
+
+                    <!-- Lehengas -->
+                    <div class="col-4 col-md-2">
+                        <a href="#" class="d-block text-decoration-none text-center group">
+                            <div class="rounded-4 overflow-hidden mb-2 position-relative shadow-sm"
+                                style="aspect-ratio: 1/1;">
+                                <img src="https://i0.wp.com/www.womansplaza.com/wp-content/uploads/2024/08/12-1.webp?ssl=1"
+                                    class="w-100 h-100 object-fit-cover transition-transform scale-hover"
+                                    alt="Lehengas">
+                                <div
+                                    class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 transition-opacity group-hover-overlay">
+                                </div>
+                            </div>
+                            <h6 class="fw-bold text-dark small text-uppercase mb-0">Lehengas</h6>
+                        </a>
+                    </div>
+
+                    <!-- Beauty -->
+                    <div class="col-4 col-md-2">
+                        <a href="#" class="d-block text-decoration-none text-center group">
+                            <div class="rounded-4 overflow-hidden mb-2 position-relative shadow-sm"
+                                style="aspect-ratio: 1/1;">
+                                <img src="https://truekindskincare.com/_ipx/w_2048&f_webp&q_95/connect-1.jpg"
+                                    class="w-100 h-100 object-fit-cover transition-transform scale-hover" alt="Beauty">
+                                <div
+                                    class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 transition-opacity group-hover-overlay">
+                                </div>
+                            </div>
+                            <h6 class="fw-bold text-dark small text-uppercase mb-0">Beauty</h6>
+                        </a>
+                    </div>
+
+                    <!-- Footwear -->
+                    <div class="col-4 col-md-2">
+                        <a href="#" class="d-block text-decoration-none text-center group">
+                            <div class="rounded-4 overflow-hidden mb-2 position-relative shadow-sm"
+                                style="aspect-ratio: 1/1;">
+                                <img src="https://www.tiesta.in/cdn/shop/products/WhatsAppImage2022-06-09at3.05.00PM_5.jpg"
+                                    class="w-100 h-100 object-fit-cover transition-transform scale-hover"
+                                    alt="Footwear">
+                                <div
+                                    class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 transition-opacity group-hover-overlay">
+                                </div>
+                            </div>
+                            <h6 class="fw-bold text-dark small text-uppercase mb-0">Footwear</h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Gear (Grid) -->
+        <section id="home-gear-section" class="py-5">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-bold mb-0 link-dark"><i class="bi bi-stars text-primary me-2"></i> Recommended Gear
+                    </h3>
                     <div class="d-flex gap-2">
                         <button
                             class="btn btn-outline-dark btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-arrow-left"></i></button>
+                            style="width: 32px; height: 32px;"><i class="bi bi-chevron-left"></i></button>
                         <button
-                            class="btn btn-dark btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center"
-                            style="width: 40px; height: 40px;"><i class="bi bi-arrow-right"></i></button>
+                            class="btn btn-outline-dark btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center"
+                            style="width: 32px; height: 32px;"><i class="bi bi-chevron-right"></i></button>
                     </div>
                 </div>
 
-                <div class="row g-4 flex-nowrap overflow-x-auto pb-4 no-scrollbar">
+                <div class="owl-carousel owl-theme">
                     <!-- Product 1 -->
-                    <div class="col-10 col-md-4">
+                    <div class="item">
                         <div
-                            class="card h-100 border-0 rounded-4 shadow-sm product-card position-relative overflow-hidden group">
-                            <div class="bg-white p-4 d-flex align-items-center justify-content-center"
+                            class="card h-100 border p-3 rounded-4 shadow-sm product-card position-relative overflow-hidden group">
+                            <div class="rounded-4 p-4 d-flex align-items-center justify-content-center mb-3"
                                 style="height: 250px;">
                                 <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=2034&auto=format&fit=crop"
-                                    class="mw-100 mh-100 object-fit-contain transition-transform" alt="iPad">
+                                    class="mw-100 mh-100 object-fit-cover transition-transform" alt="iPad">
                             </div>
-                            <div class="card-body p-4 bg-white">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <div class="text-xs fw-bold text-muted text-uppercase tracking-wide">Hardware</div>
-                                    <div class="d-flex text-warning small"><i class="bi bi-star-fill"></i><i
-                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="card-body p-0 text-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                    <div class="d-flex text-primary small">
+                                        <i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i
+                                            class="bi bi-star"></i><i class="bi bi-star"></i>
+                                    </div>
+                                    <span class="fw-bold text-muted small">4.8</span>
                                 </div>
-                                <h5 class="fw-bold mb-2">iPad Pro M4</h5>
-                                <p class="text-muted small mb-3 line-clamp-2"> The ultimate tablet experience with the
-                                    new M4 chip. Perfect for illustrators and editors on the go.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="fw-bold fs-5">$999</div>
-                                    <a href="#" class="btn btn-primary rounded-pill btn-sm px-3">Buy Now</a>
+                                <h6 class="fw-bold mb-2 fs-5">Chronos Elite Series 5</h6>
+                                <div class="product-price mb-3">$299.00</div>
+                                <a href="#" class="btn btn-primary w-100 rounded-3 py-2 fw-bold">Check Price</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 1 -->
+                    <div class="item">
+                        <div
+                            class="card h-100 border p-3 rounded-4 shadow-sm product-card position-relative overflow-hidden group">
+                            <div class="rounded-4 p-4 d-flex align-items-center justify-content-center mb-3"
+                                style="height: 250px;">
+                                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=2034&auto=format&fit=crop"
+                                    class="mw-100 mh-100 object-fit-cover transition-transform" alt="iPad">
+                            </div>
+                            <div class="card-body p-0 text-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                    <div class="d-flex text-primary small">
+                                        <i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i
+                                            class="bi bi-star"></i><i class="bi bi-star"></i>
+                                    </div>
+                                    <span class="fw-bold text-muted small">4.8</span>
                                 </div>
+                                <h6 class="fw-bold mb-2 fs-5">Chronos Elite Series 5</h6>
+                                <div class="product-price mb-3">$299.00</div>
+                                <a href="#" class="btn btn-primary w-100 rounded-3 py-2 fw-bold">Check Price</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Product 2 -->
-                    <div class="col-10 col-md-4">
+                    <div class="item">
                         <div
-                            class="card h-100 border-0 rounded-4 shadow-sm product-card position-relative overflow-hidden group">
-                            <div class="position-absolute top-0 end-0 m-3 z-1">
-                                <span class="badge bg-danger rounded-pill">Safe 20%</span>
-                            </div>
-                            <div class="bg-white p-4 d-flex align-items-center justify-content-center"
+                            class="card h-100 border p-3 rounded-4 shadow-sm product-card position-relative overflow-hidden group">
+                            <div class="rounded-4 p-4 d-flex align-items-center justify-content-center mb-3"
                                 style="height: 250px;">
                                 <img src="https://images.unsplash.com/photo-1595303526913-c7037797be77?q=80&w=2070&auto=format&fit=crop"
-                                    class="mw-100 mh-100 object-fit-contain transition-transform" alt="Chair">
+                                    class="mw-100 mh-100 object-fit-cover transition-transform" alt="Chair">
                             </div>
-                            <div class="card-body p-4 bg-white">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <div class="text-xs fw-bold text-muted text-uppercase tracking-wide">Office</div>
-                                    <div class="d-flex text-warning small"><i class="bi bi-star-fill"></i><i
-                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                            class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
-                                </div>
-                                <h5 class="fw-bold mb-2">ErgoChair Pro</h5>
-                                <p class="text-muted small mb-3 line-clamp-2">Stop back pain before it starts. Fully
-                                    adjustable lumbar support and breathable mesh.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="fw-bold fs-5">$399 <span
-                                            class="text-muted text-decoration-line-through small fw-normal ms-1">$499</span>
+                            <div class="card-body p-0 text-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                    <div class="d-flex text-primary small">
+                                        <i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i
+                                            class="bi bi-star"></i><i class="bi bi-star-half"></i>
                                     </div>
-                                    <a href="#" class="btn btn-outline-dark rounded-pill btn-sm px-3">View Deal</a>
+                                    <span class="fw-bold text-muted small">4.5</span>
                                 </div>
+                                <h6 class="fw-bold mb-2 fs-5">ErgoChair Pro</h6>
+                                <div class="product-price mb-3">$399.00</div>
+                                <a href="#" class="btn btn-primary w-100 rounded-3 py-2 fw-bold">Check Price</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Product 3 -->
-                    <div class="col-10 col-md-4">
+                    <div class="item">
                         <div
-                            class="card h-100 border-0 rounded-4 shadow-sm product-card position-relative overflow-hidden group">
-                            <div class="bg-white p-4 d-flex align-items-center justify-content-center"
+                            class="card h-100 border p-3 rounded-4 shadow-sm product-card position-relative overflow-hidden group">
+                            <div class="rounded-4 p-4 d-flex align-items-center justify-content-center mb-3"
                                 style="height: 250px;">
                                 <img src="https://images.unsplash.com/photo-1598327770698-32665ad6e678?q=80&w=2070&auto=format&fit=crop"
-                                    class="mw-100 mh-100 object-fit-contain transition-transform" alt="Mic">
+                                    class="mw-100 mh-100 object-fit-cover transition-transform" alt="Mic">
                             </div>
-                            <div class="card-body p-4 bg-white">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <div class="text-xs fw-bold text-muted text-uppercase tracking-wide">Audio</div>
-                                    <div class="d-flex text-warning small"><i class="bi bi-star-fill"></i><i
-                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                            class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                            <div class="card-body p-0 text-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                    <div class="d-flex text-primary small">
+                                        <i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i
+                                            class="bi bi-star"></i><i class="bi bi-star"></i>
+                                    </div>
+                                    <span class="fw-bold text-muted small">5.0</span>
                                 </div>
-                                <h5 class="fw-bold mb-2">Shure SM7B</h5>
-                                <p class="text-muted small mb-3 line-clamp-2">The industry standard for podcasting and
-                                    vocal recording. Crisp, warm, and professional.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="fw-bold fs-5">$399</div>
-                                    <a href="#" class="btn btn-outline-dark rounded-pill btn-sm px-3">View Deal</a>
-                                </div>
+                                <h6 class="fw-bold mb-2 fs-5">Shure SM7B</h6>
+                                <div class="product-price mb-3">$399.00</div>
+                                <a href="#" class="btn btn-primary w-100 rounded-3 py-2 fw-bold">Check Price</a>
                             </div>
                         </div>
                     </div>
+
 
                     <!-- Product 4 -->
-                    <div class="col-10 col-md-4">
+                    <div class="item">
                         <div
-                            class="card h-100 border-0 rounded-4 shadow-sm product-card position-relative overflow-hidden group">
-                            <div class="bg-white p-4 d-flex align-items-center justify-content-center"
+                            class="card h-100 border p-3 rounded-4 shadow-sm product-card position-relative overflow-hidden group">
+                            <div class="rounded-4 p-4 d-flex align-items-center justify-content-center mb-3"
                                 style="height: 250px;">
                                 <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1964&auto=format&fit=crop"
-                                    class="mw-100 mh-100 object-fit-contain transition-transform" alt="Watch">
+                                    class="mw-100 mh-100 object-fit-cover transition-transform" alt="Watch">
                             </div>
-                            <div class="card-body p-4 bg-white">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <div class="text-xs fw-bold text-muted text-uppercase tracking-wide">Wearable</div>
-                                    <div class="d-flex text-warning small"><i class="bi bi-star-fill"></i><i
-                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="card-body p-0 text-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                    <div class="d-flex text-primary small">
+                                        <i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i
+                                            class="bi bi-star"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <span class="fw-bold text-muted small">4.9</span>
                                 </div>
-                                <h5 class="fw-bold mb-2">Apple Watch Ultra</h5>
-                                <p class="text-muted small mb-3 line-clamp-2">The most rugged and capable Apple Watch
-                                    ever. Designed for exploration, adventure, and endurance.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto">
-                                    <div class="fw-bold fs-5">$799</div>
-                                    <a href="#" class="btn btn-outline-dark rounded-pill btn-sm px-3">View Deal</a>
-                                </div>
+                                <h6 class="fw-bold mb-2 fs-5">Titan Dock</h6>
+                                <div class="product-price mb-3">$215.00</div>
+                                <a href="#" class="btn btn-primary w-100 rounded-3 py-2 fw-bold">Check Price</a>
                             </div>
                         </div>
-                    </div>
+                    </div </div>
                 </div>
             </div>
         </section>
 
-        <!-- Fresh Layout: Zig Zag Features -->
-        <section id="home-features-section" class="py-5 py-lg-6 mt-lg-5">
-            <div class="container my-5">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-5 order-lg-1">
-                        <span class="text-accent fw-bold text-uppercase tracking-wider">Strategy</span>
-                        <h2 class="display-5 fw-bold mb-4 mt-2">SEO isn't dead. <br>It just evolved.</h2>
-                        <p class="text-muted fs-5 mb-4">Forget keyword stuffing. The new era is about semantic authority
-                            and user intent mapping. We break down the algorithm updates you missed.</p>
-
-                        <div class="d-flex gap-3 mt-4">
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="bi bi-check-circle-fill text-accent"></i> <span>Semantic Core</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="bi bi-check-circle-fill text-accent"></i> <span>Zero-Click Search</span>
-                            </div>
-                        </div>
-                        <div class="mt-5">
-                            <a href="#" class="btn btn-outline-dark">Read Analysis</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 offset-lg-1 order-lg-2 position-relative">
-                        <!-- Abstract layered images -->
-                        <div class="position-absolute bg-accent-soft rounded-circle"
-                            style="width: 300px; height: 300px; top: -20px; right: -20px; z-index: -1;"></div>
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-                            class="img-fluid rounded-4 shadow-lg w-100" alt="SEO Analysis">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container my-5 py-5">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-6 position-relative">
-                        <div class="position-absolute bg-secondary-soft rounded-pill"
-                            style="width: 100%; height: 80%; bottom: -20px; left: -20px; z-index: -1; transform: rotate(-3deg);">
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
-                            class="img-fluid rounded-4 shadow-lg w-100" alt="Team">
-                    </div>
-                    <div class="col-lg-5 offset-lg-1">
-                        <span class="text-secondary fw-bold text-uppercase tracking-wider">Culture</span>
-                        <h2 class="display-5 fw-bold mb-4 mt-2">Remote work that actually works.</h2>
-                        <p class="text-muted fs-5 mb-4">Building culture without an office requires intention. Here is
-                            the blueprint for async collaboration that doesn't kill creativity.</p>
-                        <a href="#" class="btn btn-outline-dark">View Guide</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Magazine Grid -->
-        <section id="home-blog-section" class="py-5">
+        <!-- Latest Reviews -->
+        <section id="home-reviews-section" class="py-5">
             <div class="container">
-                <div class="d-flex justify-content-between align-items-end mb-5">
-                    <div>
-                        <h2 class="fw-bold display-6">Fresh Perspectives</h2>
-                        <p class="text-muted m-0">Daily updates from our editorial team.</p>
-                    </div>
-                    <a href="#" class="btn btn-link text-decoration-none text-primary fw-bold">View All <i
-                            class="bi bi-arrow-right"></i></a>
-                </div>
-
+                <h3 class="fw-bold mb-4">Latest Expert Reviews</h3>
                 <div class="row g-4">
-                    <!-- Post 1 -->
-                    <div class="col-md-6 col-lg-3">
-                        <article class="blog-card-minimal">
-                            <div class="blog-img-rounded position-relative">
-                                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
-                                    class="w-100 h-100 object-fit-cover" alt="Blog 1">
-                                <span
-                                    class="position-absolute top-0 end-0 m-3 badge bg-white text-dark shadow-sm">Tech</span>
+                    <!-- Review 1 -->
+                    <div class="col-lg-4">
+                        <div class="card border-0 h-100 bg-transparent">
+                            <div class="rounded-4 overflow-hidden mb-3" style="aspect-ratio: 16/9;">
+                                <img src="https://images.unsplash.com/photo-1486946255434-2466348c2166?q=80&w=2600&auto=format&fit=crop"
+                                    class="w-100 h-100 object-fit-cover" alt="Home Office">
                             </div>
-                            <div>
-                                <div class="blog-meta text-muted mb-2">Oct 24 • 4 min read</div>
-                                <h5 class="fw-bold mb-0"><a href="#"
-                                        class="text-dark text-decoration-none">Understanding the new React Server
-                                        Components</a></h5>
+                            <div class="card-body p-0">
+                                <div class="d-flex align-items-center gap-2 mb-2 small text-uppercase fw-bold">
+                                    <span class="badge bg-primary-soft text-primary">Lifestyle</span>
+                                    <span class="text-muted">•</span>
+                                    <span class="text-muted">October 24, 2024</span>
+                                </div>
+                                <h4 class="fw-bold mb-2 text-dark">Essential Minimalist Home Office Upgrades Under $100
+                                </h4>
+                                <p class="text-muted line-clamp-2">You don't need to spend thousands to create a
+                                    professional workspace. These affordable picks will transform your productivity
+                                    instantly.</p>
+                                <a href="#" class="text-primary fw-bold text-decoration-none read-story">Read Story <i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
-                        </article>
+                        </div>
                     </div>
-                    <!-- Post 2 -->
-                    <div class="col-md-6 col-lg-3">
-                        <article class="blog-card-minimal">
-                            <div class="blog-img-rounded position-relative">
-                                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop"
-                                    class="w-100 h-100 object-fit-cover" alt="Blog 2">
-                                <span
-                                    class="position-absolute top-0 end-0 m-3 badge bg-white text-dark shadow-sm">Social</span>
+
+                    <!-- Review 2 -->
+                    <div class="col-lg-4">
+                        <div class="card border-0 h-100 bg-transparent">
+                            <div class="rounded-4 overflow-hidden mb-3" style="aspect-ratio: 16/9;">
+                                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2000&auto=format&fit=crop"
+                                    class="w-100 h-100 object-fit-cover" alt="Camera">
                             </div>
-                            <div>
-                                <div class="blog-meta text-muted mb-2">Oct 23 • 6 min read</div>
-                                <h5 class="fw-bold mb-0"><a href="#" class="text-dark text-decoration-none">Why TikTok
-                                        is searching for a new identity</a></h5>
+                            <div class="card-body p-0">
+                                <div class="d-flex align-items-center gap-2 mb-2 small text-uppercase fw-bold">
+                                    <span class="badge bg-primary-soft text-primary">Tech</span>
+                                    <span class="text-muted">•</span>
+                                    <span class="text-muted">October 23, 2024</span>
+                                </div>
+                                <h4 class="fw-bold mb-2 text-dark">Mirrorless vs. DSLR: Which Should You Buy in late
+                                    2024?</h4>
+                                <p class="text-muted line-clamp-2">We compare the top 5 entry-level cameras for content
+                                    creators to see if the mirrorless hype is actually worth the premium price tag.</p>
+                                <a href="#" class="text-primary fw-bold text-decoration-none read-story">Read Story <i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
-                        </article>
+                        </div>
                     </div>
-                    <!-- Post 3 -->
-                    <div class="col-md-6 col-lg-3">
-                        <article class="blog-card-minimal">
-                            <div class="blog-img-rounded position-relative">
-                                <img src="https://images.unsplash.com/photo-1542038784424-fa00ed4998fa?q=80&w=1979&auto=format&fit=crop"
-                                    class="w-100 h-100 object-fit-cover" alt="Blog 3">
-                                <span
-                                    class="position-absolute top-0 end-0 m-3 badge bg-white text-dark shadow-sm">Design</span>
+
+                    <!-- Review 3 -->
+                    <div class="col-lg-4">
+                        <div class="card border-0 h-100 bg-transparent">
+                            <div class="rounded-4 overflow-hidden mb-3" style="aspect-ratio: 16/9;">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2670&auto=format&fit=crop"
+                                    class="w-100 h-100 object-fit-cover" alt="Gaming">
                             </div>
-                            <div>
-                                <div class="blog-meta text-muted mb-2">Oct 21 • 3 min read</div>
-                                <h5 class="fw-bold mb-0"><a href="#" class="text-dark text-decoration-none">10
-                                        Typography trends to watch in 2025</a></h5>
+                            <div class="card-body p-0">
+                                <div class="d-flex align-items-center gap-2 mb-2 small text-uppercase fw-bold">
+                                    <span class="badge bg-primary-soft text-primary">Gaming</span>
+                                    <span class="text-muted">•</span>
+                                    <span class="text-muted">October 20, 2024</span>
+                                </div>
+                                <h4 class="fw-bold mb-2 text-dark">The Ultimate 1440p Gaming Guide: Monitors Tested</h4>
+                                <p class="text-muted line-clamp-2">High refresh rates and color accuracy meet. We
+                                    benchmarked the 10 most popular QHD monitors for response time and motion blur.</p>
+                                <a href="#" class="text-primary fw-bold text-decoration-none read-story">Read Story <i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
-                        </article>
-                    </div>
-                    <!-- Post 4 -->
-                    <div class="col-md-6 col-lg-3">
-                        <article class="blog-card-minimal">
-                            <div class="blog-img-rounded position-relative">
-                                <img src="https://images.unsplash.com/photo-1559136555-9303dff16302?q=80&w=2070&auto=format&fit=crop"
-                                    class="w-100 h-100 object-fit-cover" alt="Blog 4">
-                                <span
-                                    class="position-absolute top-0 end-0 m-3 badge bg-white text-dark shadow-sm">Growth</span>
-                            </div>
-                            <div>
-                                <div class="blog-meta text-muted mb-2">Oct 19 • 10 min read</div>
-                                <h5 class="fw-bold mb-0"><a href="#" class="text-dark text-decoration-none">The PLG
-                                        (Product Led Growth) Playbook</a></h5>
-                            </div>
-                        </article>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter Pop -->
+        <!-- Newsletter Pop (Updated Layout) -->
         <section id="newsletter" class="container mb-5 pb-5">
-            <div class="newsletter-float p-5 text-center text-white position-relative overflow-hidden">
-                <div class="position-relative z-1">
-                    <h2 class="fw-bold mb-3">Join the inner circle.</h2>
-                    <p class="opacity-75 mb-4" style="max-width: 600px; margin: 0 auto;">Get access to our private Slack
-                        community and weekly deep dives. No fluff, just actionable insights.</p>
-                    <div class="bg-white p-2 rounded-pill d-inline-flex align-items-center shadow-lg"
-                        style="max-width: 500px; width: 100%;">
-                        <input type="email" class="form-control border-0 rounded-pill ps-4"
-                            placeholder="name@company.com">
-                        <button class="btn btn-dark rounded-pill px-4 ms-2">Subscribe</button>
+            <div class="newsletter-float p-5 position-relative overflow-hidden rounded-4">
+                <div class="position-relative z-1 row align-items-start flex-column gap-4">
+                    <div class="col-lg-7">
+                        <div class="decorative-circle"></div>
+                        <h2 class="fw-bold mb-3 text-white fs-1 fw-bold">Get the best deals & reviews delivered weekly.
+                        </h2>
+                        <p class="text-light opacity-75 mb-4 mb-lg-0">Join 25,000+ professionals who get our curated
+                            selection of gear, productivity tips, and exclusive affiliate discounts every Tuesday.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="d-flex gap-2">
+                            <input type="email" class="form-control border-0 rounded-3 py-3 px-4 newsletter-input"
+                                placeholder="Your work email address">
+                            <button class="btn btn-primary rounded-3 px-4 fw-bold text-nowrap">Join Newsletter</button>
+                        </div>
+                        <p class="text-light opacity-50 small mt-3 mb-0">We respect your privacy. No spam, ever.
+                            Unsubscribe with one click.</p>
                     </div>
                 </div>
-                <!-- Decorative Circles -->
-                <div class="position-absolute top-0 start-0 translate-middle bg-white opacity-10 rounded-circle"
-                    style="width: 300px; height: 300px;"></div>
-                <div class="position-absolute bottom-0 end-0 translate-middle bg-black opacity-10 rounded-circle"
-                    style="width: 200px; height: 200px;"></div>
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer id="page-home-footer" class="py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <a class="navbar-brand d-flex align-items-center gap-2 mb-4 footer-brand" href="#">
-                        <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center"
-                            style="width: 32px; height: 32px;">
-                            <i class="bi bi-tree-fill small"></i>
-                        </div>
-                        <span class="fw-bold">fantastic-broccolies</span>
-                    </a>
-                    <p class="text-muted small">We help ambitious brands and creators navigate the noise of the digital
-                        world.</p>
-                    <div class="d-flex gap-3 text-muted">
-                        <a href="#" class="text-reset"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="text-reset"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-reset"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-2">
-                    <h6 class="fw-bold mb-3">Explore</h6>
-                    <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
-                        <li><a href="#" class="text-reset text-decoration-none">Articles</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Case Studies</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Reports</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Podcasts</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2">
-                    <h6 class="fw-bold mb-3">Company</h6>
-                    <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
-                        <li><a href="#" class="text-reset text-decoration-none">About</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Careers</a></li>
-                        <li><a href="#" class="text-reset text-decoration-none">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <p class="small text-muted mb-0">&copy; 2024 fantastic-broccolies Inc.<br>All rights reserved.</p>
-                </div>
+    <footer id="page-footer" class="py-4 bg-white border-top mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <a class="d-flex align-items-center gap-2 text-decoration-none" href="#">
+                <i class="bi bi-layout-text-window-reverse text-primary fs-5"></i>
+                <span class="fw-bold text-uppercase ls-1"
+                    style="color: #e5766c; letter-spacing: -0.5px; font-weight: 800;">EliteEditorial</span>
+            </a>
+            <div class="d-flex gap-4 small text-muted">
+                <a href="#" class="text-reset text-decoration-none">About Us</a>
+                <a href="#" class="text-reset text-decoration-none">Contact</a>
+                <a href="#" class="text-reset text-decoration-none">Privacy Policy</a>
+                <a href="#" class="text-reset text-decoration-none">Terms of Service</a>
             </div>
+            <div class="small text-muted opacity-50">&copy; 2024 ProReviews Inc. All rights reserved.</div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>

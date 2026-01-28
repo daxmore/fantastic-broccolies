@@ -1,20 +1,22 @@
 /* Global Styles & Variables */
 :root {
-    /* Strict User Palette */
-    --color-primary: #1D1E1A;
-    /* Deep Red - Action/Headings */
-    --color-secondary: #6B8F71;
-    /* Muted Red - Hover/Secondary */
-    --color-accent: #AAD2BA;
-    /* Taupe - Subtext/Borders */
-    --color-dark: #1D1E1A;
-    /* Dark Brown - Body Text */
-    --color-light: #F5F5F5;
-    /* Cream/Beige - Backgrounds */
+    /* Updated Palette: Dark Navy & Pink */
+    --color-primary: #f37e92;
+    /* Pink/Salmon - Actions/Highlights */
+    --color-secondary: #1F2937;
+    /* Dark Navy - Backgrounds/Secondary */
+    --color-accent: #64748B;
+    /* Slate Smooth - Muted/Borders */
+    --color-dark: #111827;
+    /* Near Black - Main Text/Headings */
+    --color-light: #FFFFFF;
+    /* Pure White - Backgrounds */
     --color-white: #FFFFFF;
-    /* Pure White - sparingly used for cards */
+    --color-input-dark: #374151;
+    /* Dark grey for newsletter input */
 
-    --font-heading: 'Outfit', sans-serif;
+
+    --font-heading: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
 
     --border-radius-lg: 24px;
@@ -24,7 +26,7 @@
 body {
     font-family: var(--font-body);
     color: var(--color-dark);
-    background-color: var(--color-light);
+    background-color: #fafafb !important;
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -38,7 +40,7 @@ h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     letter-spacing: -0.03em;
-    color: var(--color-primary);
+    color: var(--color-dark);
 }
 
 a {
@@ -48,17 +50,89 @@ a {
 }
 
 a:hover {
-    color: var(--color-secondary);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.nav-link {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+#subscribe-btn:hover {
+    background-color: var(--color-accent);
+}
+
+#subscribe-btn,
+.form-control,
+.bi-search {
+    font-size: 12px !important;
+}
+
+.editor {
+    background-color: #fef1f3;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 12px;
+}
+
+.hero-numbers {
+    color: #E5E7EB;
+    font-style: italic;
+}
+
+.trending-section {
+    position: relative;
+}
+
+.trending-card {
+    position: sticky;
+    top: 90px;
+    z-index: 1;
+}
+
+.read-story .bi-arrow-right {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.read-story:hover .bi-arrow-right {
+    transform: translateX(5px);
+}
+
+#newsletter {
+    position: relative;
+}
+
+#newsletter .decorative-circle {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(170px);
+}
+
+[placeholder="Your work email address"] {
+    font-size: 16px !important;
 }
 
 /* Custom Utilities */
 .bg-primary-soft {
-    background-color: rgba(140, 28, 19, 0.1);
+    background-color: rgba(243, 126, 146, 0.1);
     color: var(--color-primary);
 }
 
+.bg-grey-light {
+    background-color: #f3f4f6 !important;
+}
+
 .bg-secondary-soft {
-    background-color: rgba(191, 67, 66, 0.1);
+    background-color: rgba(31, 41, 55, 0.05);
     color: var(--color-secondary);
 }
 
@@ -100,9 +174,9 @@ a:hover {
     color: var(--color-light) !important;
 }
 
-.text-muted {
+/* .text-muted {
     color: var(--color-dark) !important;
-}
+} */
 
 .text-xs {
     font-size: 0.75rem;
@@ -110,6 +184,19 @@ a:hover {
 
 .tracking-wide {
     letter-spacing: 0.05em;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+.hover-primary:hover {
+    color: var(--color-primary) !important;
+    transition: color 0.2s ease;
+}
+
+.placeholder-light::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* Buttons */
@@ -128,10 +215,9 @@ a:hover {
 }
 
 .btn-primary:hover {
-    background-color: var(--color-secondary);
+    background-color: #e0687d;
     color: var(--color-white);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(140, 28, 19, 0.3);
+    box-shadow: 0 10px 20px rgba(243, 126, 146, 0.3);
 }
 
 .btn-dark {
@@ -154,7 +240,6 @@ a:hover {
 .btn-outline-dark:hover {
     background-color: var(--color-dark);
     color: var(--color-light);
-    transform: translateY(-2px);
 }
 
 /* Header & Nav */
@@ -171,26 +256,14 @@ a:hover {
 }
 
 .nav-link {
-    font-weight: 500;
+    font-weight: 800;
     color: var(--color-dark) !important;
     position: relative;
     margin: 0 0.5rem;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: var(--color-primary);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-    width: 100%;
+.nav-link:hover {
+    color: var(--color-primary) !important;
 }
 
 /* Hero Section: Unique Bento Style */
@@ -246,7 +319,20 @@ a:hover {
 .bento-content h2,
 .bento-content h4 {
     color: var(--color-light);
+    color: var(--color-light);
     /* Cream text on dark gradient */
+}
+
+/* Specific styling for the header search */
+.header-search-input {
+    background-color: #F3F4F6 !important;
+    /* Light grey */
+    border: none;
+    color: var(--color-dark);
+}
+
+.header-search-wrapper {
+    background-color: #F3F4F6 !important;
 }
 
 .bento-img {
@@ -271,14 +357,30 @@ a:hover {
 }
 
 .product-card {
-    min-width: 280px;
+    /* min-width: 280px; Removed for grid */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--color-white);
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(115, 87, 81, 0.15) !important;
+.product-price {
+    font-size: 1.5rem;
+    color: #0F172A;
+    /* Slate 900 */
+    font-weight: 800;
+}
+
+.star-rating {
+    color: var(--color-primary);
+}
+
+.newsletter-input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .group:hover .transition-transform {
@@ -366,9 +468,13 @@ a:hover {
 
 /* Newsletter Floating Box */
 .newsletter-float {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    background: var(--color-secondary);
     border-radius: var(--border-radius-xl);
     transform: translateY(20px);
+}
+
+#newsletter-title {
+    color: var(--color-white);
 }
 
 /* Footer Unique */
@@ -437,4 +543,212 @@ a:hover {
 
 .lh-1 {
     line-height: 1;
+}
+
+/* Review Page Specific Styles */
+
+.breadcrumb-item,
+.breadcrumb-item a {
+    font-size: 12px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Sticky Sidebar */
+.sticky-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.toc-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    color: var(--color-dark);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.toc-link:hover {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+}
+
+.toc-link.active {
+    background-color: rgba(243, 126, 146, 0.1);
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.toc-icon {
+    width: 20px;
+    text-align: center;
+}
+
+/* Comparison Table */
+.comparison-table .table-row {
+    transition: background-color 0.2s;
+}
+
+.comparison-table .table-row:hover {
+    background-color: #fafafb;
+}
+
+.rank-circle {
+    width: 30px;
+    height: 30px;
+    background-color: #e5e7eb;
+    /* Light gray default */
+    color: var(--color-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.rank-circle.top-pick {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Review Card Container */
+.review-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: white;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.rank-badge-square {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.award-badge {
+    background-color: #FEF3C7;
+    /* Yellow-100 */
+    color: #D97706;
+    /* Yellow-600 */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+/* Pros and Cons */
+.pro-item,
+.con-item {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: start;
+    gap: 8px;
+}
+
+.pro-item i {
+    color: #10B981;
+}
+
+/* Emerald */
+.con-item i {
+    color: #EF4444;
+}
+
+/* Red */
+
+.quote-box {
+    background-color: #f3f4f6;
+    border-left: 4px solid var(--color-primary);
+    padding: 1rem;
+    font-style: italic;
+    font-size: 0.95rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Specs Grid */
+.specs-box {
+    background-color: #fafafb;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.spec-value {
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+/* How We Test Section */
+.test-process-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    height: 100%;
+    border: 1px solid #e5e7eb;
+}
+
+.test-icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(243, 126, 146, 0.1);
+    color: var(--color-primary);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+}
+
+/* Article Intro */
+.article-header {
+    border-left: 5px solid var(--color-primary);
+    padding-left: 2rem;
+}
+
+/* Custom Table for 'At a Glance' */
+.glance-table th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-accent);
+    font-weight: 600;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 1rem;
+}
+
+.glance-table td {
+    vertical-align: middle;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f3f4f6;
 }
