@@ -121,6 +121,10 @@ a:hover {
     font-size: 16px !important;
 }
 
+.item {
+    cursor: grab;
+}
+
 /* Custom Utilities */
 .bg-primary-soft {
     background-color: rgba(243, 126, 146, 0.1);
@@ -507,18 +511,467 @@ a:hover {
 /* Actually, let's map warning to Secondary for consistency if strict: */
 /* .badge.bg-warning { background-color: var(--color-secondary) !important; color: var(--color-light) !important; } - Optional, avoiding for now to keep 'star' ratings visible */
 
-/* Responsive Tweaks */
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ======================================== */
+
+/* Tablet & Below (991px) */
+@media (max-width: 991px) {
+
+    /* Layout Adjustments */
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .bento-main {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    /* Remove Sticky Positioning on Tablet */
+    .sticky-sidebar,
+    .trending-card {
+        position: static !important;
+        margin-bottom: 2rem;
+    }
+
+    /* Article Header */
+    .article-header {
+        border-left-width: 3px;
+        padding-left: 1rem;
+    }
+
+    /* Section Padding Reduction */
+    section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    /* Hero Section */
+    #home-hero-section {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Reduce Feature Card Padding */
+    .feature-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile (768px and below) */
 @media (max-width: 768px) {
+
+    /* === TYPOGRAPHY === */
+    .display-1 {
+        font-size: 2rem !important;
+    }
+
+    .display-2 {
+        font-size: 1.85rem !important;
+    }
+
     .display-3 {
-        font-size: 2.5rem;
+        font-size: 1.7rem !important;
+    }
+
+    .display-4 {
+        font-size: 1.5rem !important;
+    }
+
+    .display-5 {
+        font-size: 1.35rem !important;
+    }
+
+    h1 {
+        font-size: 1.5rem !important;
+    }
+
+    h2 {
+        font-size: 1.35rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    h4 {
+        font-size: 1.05rem !important;
+    }
+
+    h5 {
+        font-size: 0.95rem !important;
+    }
+
+    h6 {
+        font-size: 0.85rem !important;
+    }
+
+    .lead {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+
+    p,
+    .fs-5 {
+        font-size: 0.9rem !important;
+    }
+
+    .small,
+    small {
+        font-size: 0.8rem !important;
+    }
+
+    /* === SPACING === */
+    .g-5,
+    .gx-5 {
+        --bs-gutter-x: 1rem !important;
+    }
+
+    .g-5,
+    .gy-5 {
+        --bs-gutter-y: 1rem !important;
+    }
+
+    .g-4,
+    .gx-4 {
+        --bs-gutter-x: 0.75rem !important;
+    }
+
+    .g-4,
+    .gy-4 {
+        --bs-gutter-y: 0.75rem !important;
+    }
+
+    /* Section Padding */
+    section {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    #home-hero-section,
+    #home-categories {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    /* === HEADER & NAVIGATION === */
+    #page-home-header {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem !important;
+    }
+
+    .navbar-brand i {
+        font-size: 1rem !important;
+    }
+
+    .header-search-wrapper {
+        min-width: 100% !important;
+        margin-top: 0.5rem;
+    }
+
+    /* === MAIN CONTENT === */
+    main,
+    #page-home-main {
+        padding-top: 70px !important;
+    }
+
+    .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* === HERO CAROUSEL === */
+    .hero-carousel .card>div:first-child {
+        height: 220px !important;
+    }
+
+    .hero-carousel .card .p-4 {
+        padding: 1.25rem !important;
+    }
+
+    .hero-carousel h1 {
+        margin-bottom: 0.75rem !important;
+    }
+
+    .hero-carousel .btn {
+        padding: 0.5rem 1.25rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    /* === CATEGORIES SECTION === */
+    #home-categories .col-4 {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    #home-categories h6 {
+        font-size: 0.7rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    #home-categories img {
+        border-radius: 12px !important;
+    }
+
+    /* === TRENDING SECTION === */
+    .trending-card {
+        padding: 1.25rem !important;
+    }
+
+    .trending-card h4 {
+        font-size: 0.95rem !important;
+    }
+
+    /* === PRODUCT CARDS === */
+    .product-card {
+        padding: 0.75rem !important;
+    }
+
+    .product-card .card-body {
+        padding: 0.75rem 0 !important;
+    }
+
+    .product-card h6 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .product-price {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .product-card .btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    .product-card>div:first-child {
+        height: 180px !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    /* === BUTTONS === */
+    .btn {
+        padding: 0.6rem 1.25rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    .btn-sm {
+        padding: 0.4rem 0.75rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+
+    /* === NEWSLETTER SECTION === */
+    .newsletter-float {
+        padding: 2rem 1.5rem !important;
+        transform: translateY(10px) !important;
+        border-radius: 24px !important;
+    }
+
+    #newsletter h2,
+    #newsletter-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .newsletter-input {
+        font-size: 0.875rem !important;
+        padding: 0.75rem 1rem !important;
+    }
+
+    /* === FOOTER === */
+    #page-home-footer,
+    #page-footer {
+        padding: 2rem 0 !important;
+    }
+
+    #page-footer .d-flex {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        text-align: center;
+    }
+
+    #page-footer .gap-4 {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+    }
+
+    /* === CARDS === */
+    .card {
+        border-radius: 16px !important;
+    }
+
+    .card.rounded-4 {
+        border-radius: 16px !important;
     }
 
     .bento-content {
-        padding: 1.5rem;
+        padding: 1rem !important;
     }
 
+    .bento-item {
+        min-height: 220px;
+    }
+
+    /* === FEATURE CARDS === */
+    .feature-card {
+        padding: 1.25rem !important;
+    }
+
+    .icon-box {
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 1.25rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* === OWL CAROUSEL CONTROLS === */
+    .owl-dots {
+        margin-top: 1rem !important;
+    }
+
+    .owl-dot {
+        width: 8px !important;
+        height: 8px !important;
+    }
+
+    /* === REVIEW PAGE ELEMENTS === */
+    .review-card {
+        padding: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .rank-badge-square {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 1rem !important;
+    }
+
+    .specs-box {
+        padding: 1rem !important;
+    }
+
+    .test-icon-box {
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 1.25rem !important;
+    }
+
+    .quote-box {
+        padding: 0.75rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* === BREADCRUMBS === */
+    .breadcrumb {
+        font-size: 0.7rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* === BADGES === */
+    .badge {
+        font-size: 0.7rem !important;
+        padding: 0.35rem 0.65rem !important;
+    }
+
+    /* === IMAGES === */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* === SPLIT SECTION === */
     #home-split-section {
-        border-radius: 0;
+        border-radius: 20px !important;
+        padding: 2rem 1.5rem !important;
+    }
+
+    .split-img-wrapper {
+        min-height: 250px !important;
+    }
+}
+
+/* Small Mobile (576px and below) */
+@media (max-width: 576px) {
+
+    /* Even tighter spacing */
+    .container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    /* Typography - Extra Small Screens */
+    h1 {
+        font-size: 1.35rem !important;
+    }
+
+    h2 {
+        font-size: 1.2rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    h4 {
+        font-size: 1rem !important;
+    }
+
+    .display-4 {
+        font-size: 1.35rem !important;
+    }
+
+    .lead {
+        font-size: 0.9rem !important;
+    }
+
+    p,
+    .fs-5 {
+        font-size: 0.85rem !important;
+    }
+
+    /* Hero Carousel */
+    .hero-carousel .card>div:first-child {
+        height: 180px !important;
+    }
+
+    /* Categories - 2 columns on very small screens */
+    #home-categories .col-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* Product Cards */
+    .product-card>div:first-child {
+        height: 150px !important;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Newsletter */
+    .newsletter-float {
+        padding: 1.5rem 1rem !important;
+    }
+
+    /* Footer */
+    .navbar-brand {
+        font-size: 1rem !important;
     }
 }
 

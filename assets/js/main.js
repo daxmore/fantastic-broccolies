@@ -42,6 +42,19 @@ $(document).ready(function () {
     reveal(); // Trigger once on load
 
 
+
+    // Hero Carousel
+    $('.hero-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        dots: true,
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true
+    });
+
     // Product Carousel Logic (Owl Carousel)
     var gearCarousel = $('#home-gear-section .owl-carousel');
     gearCarousel.owlCarousel({
